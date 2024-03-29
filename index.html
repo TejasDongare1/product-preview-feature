@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Feature</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        #default-img {
+            width: 350px;
+            height: 400px;
+            /* object-fit: cover; */
+            border: 2px solid black;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: block;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+        .images-container{
+            display: flex;
+            justify-content: center;
+        }
+        .img{
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border: 2px solid black;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./default.jpg" alt="default-img" id="default-img">
+
+    <div class="images-container">
+        <img src="./default.jpg" alt="" class="img" onclick="changeImage(1)">
+        <img src="./1.jpg" alt="" class="img"  onclick="changeImage(2)">
+        <img src="./2.jpg" alt="" class="img" onclick="changeImage(3)">
+        <img src="./3.jpg" alt="" class="img" onclick="changeImage(4)">
+        <img src="./4.jpg" alt="" class="img" onclick="changeImage(5)">
+        <img src="./5.jpg" alt="" class="img" onclick="changeImage(6)">
+    </div>
+
+    <script>
+        function changeImage(num){
+
+            const mainImage = document.getElementById('default-img');
+            
+            if(num == 1){
+                mainImage.src = 'default.jpg';
+            }else if(num == 2){
+                mainImage.src = '1.jpg';
+            }else if(num == 3){
+                mainImage.src = '2.jpg';
+            }else if(num == 4){
+                mainImage.src = '3.jpg';
+            }else if(num == 5){
+                mainImage.src = '4.jpg';
+            }else if(num == 6){
+                mainImage.src = '5.jpg';
+            }
+        }
+    </script>
+</body>
+
+</html>
